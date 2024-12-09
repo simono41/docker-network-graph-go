@@ -42,8 +42,7 @@ docker build -t code.brothertec.eu/simono41/docker-network-graph-go:latest .
 Führen Sie den Container aus, um die Docker-Netzwerkgrafik zu generieren:
 
 ```bash
-docker run --rm -v /var/run/docker.sock:/var/run/docker.sock code.brothertec.eu/simono41/docker-network-graph-go:latest
-docker run --rm -v /var/run/docker.sock:/var/run/docker.sock code.brothertec.eu/simono41/docker-network-graph:latest | dot -Tsvg -o /opt/containers/picture-uploader/uploads/network.svg
+docker run --rm -v /var/run/docker.sock:/var/run/docker.sock code.brothertec.eu/simono41/docker-network-graph-go:latest | dot -Tsvg -o /opt/containers/picture-uploader/uploads/network.svg
 ```
 
 ## Hinweise
@@ -51,6 +50,8 @@ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock code.brothertec.eu/
 - Stellen Sie sicher, dass Sie die neueste Version von Docker installiert haben.
 - Für die Ausführung des Containers sind Root-Rechte oder Mitgliedschaft in der Docker-Gruppe erforderlich.
 - Die generierte Grafik wird standardmäßig auf der Konsole ausgegeben. Verwenden Sie Umleitungen, um die Ausgabe in eine Datei zu speichern.
+- Benutzen sie diese Seite um sich mit den einzelnen Funktionen von graphviz auseinanderzusetzen
 
 Citations:
 [1] https://go.dev/dl/go1.23.4.linux-arm64.tar.gz
+[2] https://pkg.go.dev/github.com/goccy/go-graphviz@v0.2.9/cgraph#pkg-index
